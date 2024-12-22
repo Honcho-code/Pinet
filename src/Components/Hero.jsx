@@ -1,47 +1,47 @@
-import React from 'react'
-import { ButtonPrimary, ButtonOutline } from './Button'
 
 const Hero = () => {
-    const handleDownload = () => {
-        const link = document.createElement("a");
-        link.href = "/path-to-your-image.jpg"; // Replace with the correct image path or URL
-        link.download = "your-image.jpg"; // Set the file name
-        link.click();
-      };
   return (
-    <section id='home' className='pt-28 lg:pt-36'>
-        <div className='container items-center lg:grid lg:grid-cols-2 lg:gap-10'>
-            <div>
-                <div className='flex items-center gap-3'>
-                    <figure className='img-box w-9 h-9 rounded-lg'>
-                        <img src="./images/avatar-1.jpg" width={40} height={40} alt='Rapheal clinton portrait' className='img-cover' />
-                    </figure>
-                    <div className="flex items-center gap-1.5 text-zinc-400 text-sm tracking-wide">
-                        <span className='relative w-2 h-2 rounded-full bg-emerald-400'>
-                            <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
-                        </span>
-                        Available for work
-                    </div>
-                </div>
-                <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                    Building Scalable Modern Websites for the Future
-                </h2>
-
-                <div className="flex items-center gap-3">
-                    <ButtonPrimary label="Download CV" icon="download" href="./images/Rapheal clinton.pdf" />
-
-                    <ButtonOutline href="#about" label="Scroll down" icon="arrow_downward"/>
-                </div>
-            </div>
-
-            <div className="hidden lg:block">
-                <figure className='w-full max-w-[480px] ml-auto bg-gradient-to-t from-red-600 via-25% via-red-400/40 to-65% rounded-[60px] overflow-hidden'>
-                    <img src="./images/profile.png" width={656}height={800} alt="Rapheal CLinton" className='w-full'/>
-                </figure>
-            </div>
+    <div className=" bg-gradient-to-r from-blue-600 to-blue-800 pt-24 w-full h-full" id="home">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center">
+          <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+            <span className="block">Empowering Data-Driven Solutions</span>
+            <span className="block text-blue-200">
+              for a Sustainable Future
+            </span>
+          </h1>
+          <p className="mt-3 max-w-md mx-auto text-base text-blue-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Transform complex environmental and industrial challenges into
+            cutting-edge AI-driven solutions through the power of data science,
+            geospatial analysis, and machine learning.
+          </p>
+          <div className="mt-10 flex justify-center gap-4">
+            <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50">
+              Get Started
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-right ml-2 h-5 w-5"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </button>
+            <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 bg-opacity-20 hover:bg-opacity-30">
+              Learn More
+            </button>
+          </div>
         </div>
-    </section>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Hero
+export default Hero;
