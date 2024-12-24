@@ -1,23 +1,15 @@
 import "./App.css";
-import Navbar from './Components/Navbar'
-import Hero from "./Components/Hero";
-import Service from "./Components/Service";
-import AboutUs from "./Components/AboutUs";
-import Product from "./Components/Product";
-import Contact from "./Components/Contact";
-
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from "./Page.jsx/Home";
+import Wallet from "./Page.jsx/Wallet";
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <main>
-        <Hero/>
-        <AboutUs/>
-        <Service/>
-        <Product/>
-        <Contact/>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/wallet" element={<Wallet/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
